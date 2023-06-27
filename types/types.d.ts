@@ -44,6 +44,17 @@ export interface UserProfile {
     };
 }
 
+
+type Provider = {
+  id: string;
+  name: string;
+  type: string;
+  signinUrl: string;
+  callbackUrl: string;
+  signinUrlParams?: Record<string, string> | undefined;
+};
+
+
 export interface SessionInterface extends Session {
   user: User & {
     id: string;
